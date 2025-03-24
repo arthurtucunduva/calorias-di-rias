@@ -1,0 +1,26 @@
+# usar o software anterior
+# contar a quantidades que comem mais de 2kcal por dia
+# ler as quantidades de calorias diarias (10x)
+# calcular a média delas
+# ver o maior valor
+# ver o menor valor
+# imprimir a média, maior valor e, menor valor
+maior = -999
+menor = 1000000
+pessoas = 0
+c = soma = 0
+while c < 10:
+  caldia = int(input(f'qual a foi a quantidade de colarias ingeridas no dia {c + 1}? '))
+  c += 1
+  soma += caldia
+  if caldia > maior:
+    maior = caldia
+  if caldia < menor:
+    menor = caldia
+  if caldia >= 2000:
+    pessoas += 1
+média = soma/10
+print(f'a média da quantidade de calorias consumidas foi de: {média}')
+print(f'quantidade máxima consumida em um dia: {maior}')
+print(f'quantidade mínima consumida em um dia: {menor}')
+print(f'a quantidade de pessoas que comem mais de 2kcal diárias é de: {pessoas}')
